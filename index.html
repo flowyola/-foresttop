@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="Z9QqxBISR3njRypY1JIylHchp3qn9ooI-mxqEZD5nL8" />
+    <title>Batam Forest Top - Destinasi Wisata Terbaik di Batam</title>
+    <meta name="description" content="Jelajahi keindahan alam dari ketinggian di Batam Forest Top. Nikmati pemandangan spektakuler, spot foto instagramable, dan aktivitas seru untuk seluruh keluarga.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <style>
+        /* === GLOBAL STYLES === */
+        :root {
+            --primary-green: #2E7D32; /* Rich Forest Green */
+            --accent-yellow: #FFC107; /* Sunny Yellow */
+            --light-bg: #F9F9F9;
+            --dark-text: #333333;
+            --white-color: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-text);
+            background-color: var(--white-color);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        h1 { font-size: 4rem; line-height: 1.1; }
+        h2 { font-size: 2.8rem; text-align: center; }
+        h3 { font-size: 1.5rem; }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--accent-yellow);
+            color: var(--dark-text);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ffb300;
+            transform: translateY(-3px);
+        }
+
+        /* === HEADER & NAVIGATION === */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 5%;
+        }
+
+        .navbar .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+        .navbar .logo i {
+            color: var(--accent-yellow);
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .navbar ul li a {
+            color: var(--dark-text);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: var(--primary-green);
+        }
+        .navbar .btn-nav {
+            padding: 8px 20px;
+            margin-left: 15px;
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1875&auto=format&fit=crop') no-repeat center center/cover;
+            color: var(--white-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            color: var(--white-color);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* === ABOUT SECTION === */
+        #about {
+            background: var(--light-bg);
+            text-align: center;
+        }
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* === ACTIVITIES SECTION === */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .activity-card {
+            background: var(--light-bg);
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            border-bottom: 4px solid var(--accent-yellow);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .activity-card .icon {
+            font-size: 3.5rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+
+        /* === GALLERY SECTION === */
+        #gallery {
+            background-color: var(--light-bg);
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 250px);
+            gap: 15px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .item-1 { grid-column: 1 / 3; } /* Spans 2 columns */
+        .item-3 { grid-row: 2 / 3; grid-column: 2 / 4; } /* Spans 2 columns on 2nd row */
+
+        /* === TICKETS & INFO SECTION === */
+        .info-container {
+            display: flex;
+            gap: 50px;
+            margin-top: 50px;
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: 10px;
+        }
+        .ticket-pricing, .opening-hours {
+            flex: 1;
+        }
+        .ticket-pricing h3, .opening-hours h3 {
+            border-bottom: 2px solid var(--accent-yellow);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .price-item, .schedule-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            padding: 10px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+        .price-item span:first-child, .schedule-item span:first-child {
+            font-weight: 700;
+        }
+        .note {
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        /* === MAP SECTION === */
+        .map-container iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        /* === FOOTER === */
+        footer {
+            background-color: var(--primary-green);
+            color: var(--light-bg);
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .social-media a {
+            color: var(--white-color);
+            font-size: 1.6rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: var(--accent-yellow);
+        }
+        
+        footer p {
+            margin-top: 20px;
+        }
+        
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+            .item-1, .item-3 { grid-column: auto; grid-row: auto; }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.2rem; }
+            
+            .navbar { flex-direction: column; gap: 15px; padding: 15px; }
+            .navbar ul { flex-wrap: wrap; justify-content: center; }
+            
+            .info-container { flex-direction: column; gap: 30px; }
+            
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <a href="#" class="logo"><i class="fas fa-tree"></i> Batam Forest Top</a>
+        <nav>
+            <ul>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#activities">Aktivitas</a></li>
+                <li><a href="#info">Tiket & Info</a></li>
+                <li><a href="#info" class="btn btn-nav">Beli Tiket</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>JELAJAHI SURGA TERSEMBUNYI DI PUNCAK BATAM</h1>
+                <p>Nikmati pemandangan spektakuler, aktivitas seru, dan spot foto instagramable di tengah hutan asri Batam Forest Top.</p>
+                <a href="#activities" class="btn">Lihat Aktivitas Seru</a>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about">
+            <div class="container">
+                <h2>SATU TEMPAT, SEJUTA PETUALANGAN</h2>
+                <p><a href="http://foresttop.hbliulab.org/" target="_blank">Batam Forest Top</a> adalah destinasi wisata alam terpadu yang dirancang untuk semua kalangan. Kami menggabungkan keindahan alam Batam yang menakjubkan dengan berbagai wahana rekreasi yang aman dan menyenangkan. Baik Anda mencari ketenangan, tantangan adrenalin, atau sekadar tempat bersantai bersama keluarga, semuanya ada di sini.</p>
+            </div>
+        </section>
+
+        <!-- ACTIVITIES SECTION -->
+        <section id="activities">
+            <div class="container">
+                <h2>AKTIVITAS UNGGULAN</h2>
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <div class="icon"><i class="fas fa-camera-retro"></i></div>
+                        <h3>Spot Foto Instagramable</h3>
+                        <p>Abadikan momen di jembatan gantung, ayunan raksasa, rumah pohon, dan banyak spot lain dengan latar belakang pemandangan hutan dan kota.</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="icon"><i class="fas fa-person-hiking"></i></div>
+                        <h3>Wahana Adrenalin</h3>
+                        <p>Uji nyali Anda dengan flying fox yang melintasi lembah, tantangan outbound, dan berbagai permainan ketangkasan lainnya.</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="icon"><i class="fas fa-utensils"></i></div>
+                        <h3>Kafe & Resto</h3>
+                        <p>Bersantai sambil menikmati hidangan lezat dan secangkir kopi di kafe kami yang memiliki pemandangan langsung ke alam terbuka.</p>
+                    </div>
+                     <div class="activity-card">
+                        <div class="icon"><i class="fas fa-campground"></i></div>
+                        <h3>Area Keluarga</h3>
+                        <p>Nikmati waktu berkualitas bersama keluarga di area piknik yang luas, taman bermain anak, dan jalur setapak yang ramah untuk semua usia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section id="gallery">
+            <div class="container">
+                <h2>ABADIKAN MOMEN TAK TERLUPAKAN</h2>
+                 <div class="gallery-grid">
+                    <!-- Ganti 'src' dengan URL gambar Anda -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TICKETS & INFO SECTION -->
+        <section id="info">
+            <div class="container">
+                <h2>TIKET & INFORMASI</h2>
+                <div class="info-container">
+                    <div class="ticket-pricing">
+                        <h3>HARGA TIKET MASUK</h3>
+                        <div class="price-item">
+                            <span>Dewasa (Weekdays)</span>
+                            <span>Rp 50.000</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Dewasa (Weekend/Libur)</span>
+                            <span>Rp 75.000</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Anak-anak (5-12 thn)</span>
+                            <span>Rp 35.000</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Anak di bawah 5 thn</span>
+                            <span>GRATIS</span>
+                        </div>
+                        <p class="note">*Harga tiket masuk sudah termasuk akses ke semua spot foto. Wahana berbayar terpisah.</p>
+                    </div>
+                    <div class="opening-hours">
+                        <h3>JAM OPERASIONAL</h3>
+                        <div class="schedule-item">
+                            <span>Senin - Jumat</span>
+                            <span>09:00 - 18:00 WIB</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span>Sabtu, Minggu & Hari Libur</span>
+                            <span>08:00 - 19:00 WIB</span>
+                        </div>
+                        <h3>LOKASI</h3>
+                        <p>Jl. Puncak Hijau No. 1, Nongsa, Batam, Kepulauan Riau, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP SECTION -->
+        <section id="location">
+             <div class="container">
+               <a href="https://vpsekspor.com/"> <h2>JASA PEMBUATAN WEBSITE BATAM</h2></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="social-media">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p>© 2025 <a href="https://jagoankita.my.id">JagoanKita</a> Batam Forest Top. All Rights Reserved.</p>
+        </div>
+    </footer>
+<div style="display: none;">
+    <li><a href="http://commonspace.chipandjoannaexposed.com/" target="_blank">	commonspace</a></li>
+<li><a href="http://liminalcoffee.foxie.cool/" target="_blank">	liminalcoffee</a></li>
+<li><a href="http://lanacoffee.plasmic.site/" target="_blank">	lanacoffee</a></li>
+<li><a href="http://dianahomemade.ics-csirt.io/" target="_blank">	dianahomemade</a></li>
+</div>
+</body>
+</html>
